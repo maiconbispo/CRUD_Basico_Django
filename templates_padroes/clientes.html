@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Clientes</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<p>{{djangomoc}}</p>
+	<hr>
+
+	<ol>
+		{% for cliente in lista_clientes %}
+				<li><a href="{% url 'cliente_update' cliente.id %}">{{cliente}}</a></li>
+		{% endfor%}
+	</ol>
+	<a href="{% url 'cliente_create' %}">Novo Cliente</a>
+
+</body>
+</html>

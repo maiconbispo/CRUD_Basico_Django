@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Excluir cliente</title>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <p>
+        Voce tem certeza que deseja excluir {{object}}
+      </p>
+      <button type="submit">Deletar</button>
+    </form>
+  </body>
+</html>

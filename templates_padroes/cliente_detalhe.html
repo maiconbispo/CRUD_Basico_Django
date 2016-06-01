@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cliente Detalhe</title>
+</head>
+
+<body>
+    <h1>Dados vazados sobre {{object.nome}}</h1>
+    <hr>
+    <form method="post">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit">Atualizar</button>
+    </form>
+    <br>
+    <br>
+    <a href="{% url 'cliente_delete' object.id %}">Deletar</a>
+    <a href="{% url 'cliente_principal' %}"> Voltar</a>
+</body>
+
+</html>
